@@ -6,12 +6,37 @@
         xmlns:local="clr-namespace:QuickJS"
         xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         mc:Ignorable="d"
-        Title="QuickJS" Height="450" Width="800">
+        Title="QuickJS" Height="650" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Row="0">
+            <ToolBar>
+                <Button>
+                    <Image Source="/QuickJS;component/Resources/New.png" Width="16" Height="16"/>
+                </Button>
+                <Button>
+                    <Image Source="/QuickJS;component/Resources/Open.png" Width="16" Height="16"/>
+                </Button>
+                <Button>
+                    <Image Source="/QuickJS;component/Resources/Save.png" Width="16" Height="16"/>
+                </Button>
+                <Separator/>
+                <Button Name="RunButton" Click="RunButton_Click">
+                    <Image Source="/QuickJS;component/Resources/Run.png" Width="16" Height="16"/>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
         <avalonEdit:TextEditor
-				Name="textEditor"
-				FontFamily="Consolas"
-				FontSize="10pt"
-				SyntaxHighlighting="JavaScript"/>
+            Grid.Row="1"
+			Name="textEditor"
+			FontFamily="Consolas"
+			FontSize="10pt"
+			SyntaxHighlighting="JavaScript"
+            ShowLineNumbers="True"/>
+        <TextBox Grid.Row="2" Name="ConsoleTextBox" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="LightGray" FontFamily="Consolas"/>
     </Grid>
 </Window>

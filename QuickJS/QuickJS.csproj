@@ -59,7 +59,7 @@
       <HintPath>..\packages\AvalonEdit.5.0.4\lib\Net40\ICSharpCode.AvalonEdit.dll</HintPath>
     </Reference>
     <Reference Include="JavaScript.Net">
-      <HintPath>..\..\..\..\Users\Twometer\Downloads\Javascript.Net-master\Javascript.Net-master\x64\Release\JavaScript.Net.dll</HintPath>
+      <HintPath>C:\Users\twome\Downloads\Javascript.Net-master\Javascript.Net-master\x64\Release\JavaScript.Net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -95,6 +95,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Highlighting\ITextMarker.cs" />
+    <Compile Include="Highlighting\TextMarkerService.cs" />
+    <Compile Include="JavaScript\Console.cs" />
+    <Compile Include="JavaScript\JsExecutor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -134,6 +138,10 @@
     <Content Include="icuuc.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\Save.png" />
+    <Resource Include="Resources\New.png" />
+    <Resource Include="Resources\Open.png" />
+    <Resource Include="Resources\Run.png" />
     <Content Include="v8.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -144,8 +152,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JavaScript\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
