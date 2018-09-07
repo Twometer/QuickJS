@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuickJS"
+        xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
         mc:Ignorable="d"
         Title="QuickJS" Height="450" Width="800">
     <Grid>
-        
+        <avalonEdit:TextEditor
+				Name="textEditor"
+				FontFamily="Consolas"
+				FontSize="10pt"
+				SyntaxHighlighting="JavaScript"/>
     </Grid>
 </Window>

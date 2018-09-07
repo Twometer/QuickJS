@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ICSharpCode.AvalonEdit.Highlighting;
+using ICSharpCode.AvalonEdit.Indentation.CSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,7 @@ namespace QuickJS
         public MainWindow()
         {
             InitializeComponent();
+            textEditor.TextArea.IndentationStrategy = new CSharpIndentationStrategy(textEditor.Options);
         }
     }
 }
